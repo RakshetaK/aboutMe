@@ -1,0 +1,430 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    text-align: center;
+    background-color: black;
+
+}
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    background-image: url('Screenshot\ 2025-07-06\ 204936.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+
+    
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.welcome-title{
+    color: black;
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 13.5vw;
+    animation: fade-in 3s linear;
+    text-shadow: 0 4px 10px rgba(241, 3, 3, 0.867);
+}
+.card-wrapper{
+    height: auto;
+    width: 100%;
+    gap: 2%;
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    overflow: hidden;
+    background-color: black;
+    margin: 0;
+    padding-bottom: 15vh;
+    
+}
+.card{
+    position: relative;
+    aspect-ratio: 8/10;
+    width: 15%;
+    border-radius: 12%;
+    box-shadow: 0px 35px 77px -17px rgba(249, 139, 65, 0.867);
+    filter: blur(0.5px);
+    border-color: black;
+    background: transparent;
+
+}
+.card-inner{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.card-front{
+    background-image: url("Screenshot\ 2025-07-02\ 212042.png");
+    background-size: cover;
+    position: absolute;
+    border-radius: 12%;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.card-back{
+    position: absolute;
+    border-radius: 12%;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+}
+.card.active{
+    filter: none;
+    width: 25%;
+    border-color:rgba(249, 139, 65, 0.867);
+    transition: all 0.1s ease-in-out;
+}
+.card.active .card-inner:hover{
+    transform: rotateY(180deg);
+}
+.tarot-title{
+    font-size: 8.5vw;
+    text-shadow: 0px 4px 10px rgba(249, 139, 65, 0.867);
+}
+.about{
+    height: auto;
+    width: 100%;
+    margin-bottom: 10%;
+    display: block;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.289), rgba(0, 0, 0, 0.547)),url('Screenshot\ 2025-07-06\ 204936.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.about-me{
+    margin: 0;
+    font-size: 8.5vw;
+    text-shadow: 0px 4px 10px rgba(249, 139, 65, 0.867);
+    margin-bottom: 5vh;
+   
+}
+.bio-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    
+    
+}
+.profile{
+    background-image: linear-gradient(rgba(22, 1, 1, 0.608), rgba(0, 0, 0, 0.4)), url('IMG_9030.jpg');
+    position: relative;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    aspect-ratio: 6/5;
+    width: 25vw;
+    height: 30vw;
+    left: 8%;
+    z-index: 2;
+    box-shadow: 0px 15px 77px -17px rgba(255, 147, 46, 0.9);
+    border: black;
+}
+.name{
+    color: rgba(255, 148, 47, 0.423);
+    line-height: 3vw;
+    font-size: 2vw;
+    background-color: black;
+    padding-left: 15vw;
+    padding-right: 8vw;
+    padding-top:20vh;
+    padding-bottom: 20vh;
+    text-align: left;
+    width: 60%;
+    z-index: 1;
+    box-shadow: 0px 15px 77px -17px rgba(255, 147, 46, 0.9);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.hobbies{
+    height: auto;
+    width: 100%;
+    margin-bottom: 10%;
+}
+.art{
+    margin: 0;
+    font-size: 8.5vw;
+    text-shadow: 0px 4px 10px rgba(255, 147, 46, 0.9);
+}
+
+.marquee-wrapper{
+    overflow: hidden;
+    padding: 8vh;
+}
+.marquee{
+    display: flex;
+    width: 500%;
+    flex-direction: row;
+    gap: 1%;
+    /* border: 2px solid white; */
+    animation: scroll-left 120s linear infinite;
+}
+.marquee img{
+    /* aspect-ratio: 3.2/5; */
+   height: 60vh;
+   box-shadow: 0px 15px 60px -17px rgba(255, 147, 46, 0.9);
+   border: 4px solid black;
+   filter: brightness(0.7);
+   
+}
+@keyframes scroll-left {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+.interests{
+    height: auto;
+    width: 100%;
+    margin-bottom: 50%;
+    position: relative;
+}
+.book-nook{
+    margin-bottom: 15%;
+    font-size: 8.5vw;
+    text-shadow: 0px 4px 10px rgba(249, 139, 65, 0.867);
+    transition: all 0.5s ease-in-out;
+}
+
+.sky{
+    top:0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+.planet-cards{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 4%;
+}
+.planet{
+    position: relative;
+    border-radius: 50%;
+    width: 25vw;
+    aspect-ratio: 1/1;
+    top: 0;
+    background: black;
+    /* color: rgba(249, 139, 65, 0.867); */
+    text-shadow: 0 1px 4px rgba(249, 139, 65, 0.867);
+    font-size: 2.5vw;
+    box-shadow: 
+    0 0 5px rgba(249, 139, 65, 0.867),
+    -5px 0 20px rgba(249, 139, 65, 0.867),
+    5px 0 20px rgba(249, 139, 65, 0.867);
+    transition: all 0.5s ease-in-out;
+    border:none;
+}
+
+.planet:hover{
+    width: 30vw;
+    text-shadow: 0 1px 4px rgba(3, 250, 197, 0.867);
+    box-shadow: 
+    5px 0 40px rgba(3, 250, 197, 0.867),
+    -5px 0 50px rgba(241, 3, 3, 0.867);
+    
+}
+
+.shooting-star{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    top: 0;
+    left: 0; 
+    transform: rotate(135deg);
+    animation: shoot 3s ease-out forwards;
+    opacity: 0;
+    box-shadow:  0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 1)  ;;
+    
+}
+.shooting-star::before{
+    content: '';
+    top:150px;
+    left:-148px;
+    position: absolute;
+    width: 300px;
+    height: 1px;
+    transform: rotate(90deg);
+    background: linear-gradient(90deg, #fff, transparent);
+  
+}
+@keyframes shoot {
+    0%{
+        transform: translate(0,0) rotate(135deg);
+        opacity: 1;
+
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(100vw,100vh) rotate(135deg);
+        opacity: 0;
+
+    }
+    
+}
+.fun-facts{
+    height: auto;
+    width: 80%;
+    margin-bottom: 10%;
+    display: block;
+    margin: 0 auto 10%;
+    text-align: center;
+    box-shadow: 0 10px 77px -17px rgba(249, 139, 65, 0.867);
+    padding-bottom: 15vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.289), rgba(0, 0, 0, 0.547)),url('Screenshot\ 2025-07-06\ 204936.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.facts{
+    margin: 0;
+    font-size: 8.5vw;
+    text-shadow: 0px 4px 10px rgba(255, 147, 46, 0.9);
+    padding-bottom: 5vh;
+}
+.fortune-ball{
+    aspect-ratio: 1/1;
+    background-color: black;
+    border:none;
+    width: 40vw;
+    border-radius: 50%;
+    padding: 8vw;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+    inset 0 0 50px rgba(255, 120, 30, 0.867),
+    inset -20px 0 60px rgba(249, 139, 65, 0.867),
+    inset 20px 0 60px rgba(197, 13, 13, 0.867),
+    
+    inset 20px 0 300px rgb(228, 11, 11),
+    inset -20px 0 300px rgba(235, 14, 14, 0.867),
+
+    0 0 5px rgba(208, 18, 18, 0.867),
+    -10px 0 100px rgba(249, 139, 65, 0.867),
+    10px 0 100px rgba(249, 139, 65, 0.867);
+    animation: pulse 1.5s infinite alternate;
+}
+.fact{
+    color: rgba(255, 148, 47, 0.423);
+    /* text-shadow: 0px 0.5px 3px rgba(255, 147, 46, 0.9); */
+    line-height: 5vw;
+    font-size: 1.5vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+}
+@keyframes pulse 
+{
+    0%{
+        box-shadow:
+            inset 0 0 200px rgba(255, 147, 46, 0.9),
+            0 0 10px rgba(230, 18, 18, 0.9);
+    }
+    100%{
+        box-shadow:
+            inset 0 0 100px rgba(225, 23, 23, 0.927),
+            0 0 30px rgba(212, 20, 20, 0.9);
+    }
+}
+.kwk{
+    height: auto;
+    width: 100%;
+    margin-bottom: 10%;
+    
+}
+.kode{
+    margin: 0;
+    font-size: 8.5vw;
+    text-shadow: 0px 4px 10px rgba(3, 250, 197, 0.867);
+}
+.camp-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 4%;
+   
+}
+.dev{
+    aspect-ratio: 1/1;
+    width: 40vw;
+    /* height: 40vw; */
+    box-shadow: 0 10px 77px -17px rgba(249, 139, 65, 0.867);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.289), rgba(0, 0, 0, 0.547)),url('Screenshot\ 2025-07-06\ 204936.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.dev-title{
+    display: block;
+    text-shadow: 0 2px 5px rgba(249, 139, 65, 0.867);
+    font-size: 4.5vw;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.dev-blurb{
+    display: none;
+    margin: 4.5vw;
+    transform: rotateY(180deg);
+    font-size: 1.5vw;
+    line-height: 5.3vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.dev:hover{
+    transform: rotateY(180deg);
+    box-shadow: 0 10px 77px -17px rgba(3, 250, 197, 0.867);
+}
+.dev:hover .dev-blurb{
+    display: block;
+    color:  rgba(15, 109, 89, 0.867);
+     
+}
+.dev:hover .dev-title{
+    display: none;
+}

@@ -1,0 +1,216 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>replit</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="fullpage.css">
+        <script src="undefined"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+        <script src="fullpage.js"></script>
+        <link rel="stylesheet" type="text/css" href="nav.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+        <div class="welcome">
+            <h1 class="welcome-title">WELCOME</h1>
+        </div>
+        <h1 class = "tarot-title">PICK A CARD</h1>
+        <div class="card-wrapper">
+            <button class = "card" id="1">
+                <div class="card-inner">
+                    <div class="card-front"></div>
+                    <div class="card-back" style=" background-image: url('Screenshot\ 2025-07-02\ 224513.png');background-size: cover;"></div>
+                </div> 
+            </button>
+            <button class = "card" id="2">
+                <div class="card-inner">
+                    <div class="card-front"></div>
+                    <div class="card-back" style=" background-image: url('Screenshot\ 2025-07-02\ 224531.png');background-size: cover;"></div>
+                </div> 
+            </button>
+            <button class = "card" id="3">
+                <div class="card-inner">
+                    <div class="card-front"></div>
+                    <div class="card-back" style=" background-image: url('Screenshot\ 2025-07-02\ 224551.png');background-size: cover;"></div>
+                </div> 
+            </button>
+            <button class = "card" id="4">
+                <div class="card-inner">
+                    <div class="card-front"></div>
+                    <div class="card-back" style=" background-image: url('Screenshot\ 2025-07-02\ 225052.png');background-size: cover;"></div>
+                </div> 
+            </button>
+            <button class = "card" id="5">
+                <div class="card-inner">
+                    <div class="card-front"></div>
+                    <div class="card-back" style=" background-image: url('Screenshot\ 2025-07-02\ 225549.png');background-size: cover;"></div>
+                </div> 
+            </button>
+            
+           
+        </div>
+         <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                let cards = document.querySelectorAll('.card');
+                cards.forEach(card => {
+                    card.addEventListener('click', ()=>{
+                        cards.forEach(c=>c.classList.remove('active'));
+                        card.classList.add('active');
+                        setTimeout(()=>{
+                            if(card.id==="1"){
+                                document.getElementById('about').scrollIntoView({behavior: "smooth"});
+                            }
+                            if(card.id==="2"){
+                                document.getElementById('hobbies').scrollIntoView({behavior: "smooth"});
+                            }
+                            if(card.id==="3"){
+                                document.getElementById('interests').scrollIntoView({behavior: "smooth"});
+                            }
+                            if(card.id==="4"){
+                                document.getElementById('fun-facts').scrollIntoView({behavior: "smooth"});
+                            }
+                            if(card.id==="5"){
+                                document.getElementById('kwk').scrollIntoView({behavior: "smooth"});
+                            }
+                        },2500)
+                        
+                        //add delay
+                        //scroll to id
+                    })
+                })
+
+            });
+        </script>
+        <div class="about" id="about">
+            <h1 class="about-me">ABOUT ME</h1>
+            <div class="bio-wrapper">
+                <div class="profile"></div>
+                <div class="bio">
+                    <h1 class="name">Hi, I'm Raksheta Kulkarni!<br>I am a rising sophomore at USC majoring in Computer Engineering and Computer Science.<br>I love working with computer vision and hope to work with robots in the future!</h1>
+                </div>
+            </div>
+           
+        </div>
+        <div class="hobbies" id = "hobbies">
+            <h1 class="art">MY ART GALLERY</h1>
+            <div class="marquee-wrapper">
+                <div class="marquee">
+                    <img src="portraits/IMG_2709.jpg">
+                    <img src="portraits/IMG_9074.jpg">
+                    <img src="portraits/IMG_3644.jpg">
+                    <img src="portraits/IMG_3549.jpg">
+                    <img src="portraits/IMG_3860.jpg">
+                    <img src="portraits/IMG_8186.jpg">
+                    <img src="portraits/IMG_2709.jpg">
+                    <img src="portraits/IMG_9074.jpg">
+                    <img src="portraits/IMG_3644.jpg">
+                    <img src="portraits/IMG_3549.jpg">
+                    <img src="portraits/IMG_3860.jpg">
+                    <img src="portraits/IMG_8186.jpg">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="interests" id="interests">
+            <h1 class="book-nook">INTERESTS</h1>
+            <div class="sky" id="sky"></div>
+            <div class="planet-cards">
+                <a href="https://www.canva.com/design/DAGsXwN3Pug/_fQZbSQCe-dQ_WGwtDl2JA/view?utm_content=DAGsXwN3Pug&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb82a19b665">
+                    <button class="planet" id="planet1">BOOK-NOOKS</button>
+                </a>
+                <a href="https://www.canva.com/design/DAGsYKrUm-k/jo9_kf-J4oPN0mQHR5Li0w/view?utm_content=DAGsYKrUm-k&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h39b017bb22">
+                    <button class="planet" id="planet2">TV SHOWS</button>
+                </a>
+                <a href="https://www.canva.com/design/DAGsYDRsEgE/_XaVrz0Cqxt_mdIgfIPbTw/view?utm_content=DAGsYDRsEgE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h10b2aff361">
+                    <button class="planet" id="planet3">3D MODELING</button>
+                </a>
+            </div>
+            
+        </div>
+        <script>
+            function createStar(){
+                const star = document.createElement('div');
+                star.classList.add('shooting-star');
+                star.style.top = `${Math.random()*40}vh`;
+                star.style.left = `${Math.random()*20}vw`;
+                document.getElementById('sky').appendChild(star);
+                setTimeout(()=>{
+                    star.remove();
+                },1500);
+                setTimeout(()=>{
+                    const star2 = document.createElement('div');
+                    star2.classList.add('shooting-star');
+                    star2.style.top = `${Math.random()*40}vh`;
+                    star2.style.left = `${Math.random()*20}vw`;
+                    document.getElementById('sky').appendChild(star2);
+                    setTimeout(()=>{
+                        star2.remove();
+                    },1500);
+                },200)
+                setTimeout(()=>{
+                    const star3 = document.createElement('div');
+                    star3.classList.add('shooting-star');
+                    star3.style.top = `${Math.random()*40}vh`;
+                    star3.style.left = `${Math.random()*20}vw`;
+                    document.getElementById('sky').appendChild(star3);
+                    setTimeout(()=>{
+                        star3.remove();
+                    },1500);
+                },1500)
+                
+            }
+            setInterval(()=>{
+                createStar();
+            },2000);
+            document.querySelectorAll('.planet').forEach(planet=>{
+                planet.addEventListener('mouseenter', ()=>{
+                    document.querySelector('.book-nook').style.textShadow = '0px 4px 10px rgba(3, 250, 197, 0.867)';
+                });
+                planet.addEventListener('mouseleave', ()=>{
+                    document.querySelector('.book-nook').style.textShadow= '';
+                });
+            });
+        </script>
+        <div class="fun-facts" id="fun-facts">
+            <h1 class="facts">FUN FACTS!</h1>
+            <button class="fortune-ball">
+                <h1 class="fact">Click Here!</h1>
+            </button>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                let funFacts = ["I have a six year old tabby named Luna","I've chipped two teeth and now they're made of resin","I recently learned to play Mahjong (a Chinese tile game)"];
+                let f = document.querySelector('.fact');
+                let fortune = document.querySelector('.fortune-ball');
+                let i = 0;
+                fortune.addEventListener('click', ()=>{
+                    if(i===funFacts.length){
+                        i = 0;
+                    }
+                    f.textContent = funFacts[i];
+                    i++;
+                })
+                
+            })
+//my interests: want to 3D print and assemble my own book nook,  
+        </script>
+        <div class="kwk" id = "kwk">
+            <h1 class="kode">MY KWK JOURNEY</h1>
+            <div class="camp-wrapper">
+                <div class="dev">
+                    <h1 class="dev-title">APP DEVELOPMENT</h1>
+                    <h1 class="dev-blurb">I began my KWK journey with the app development camp in 2022, where I learned to work with Swift and XCode!</h1>
+                </div>
+                <div class="dev">
+                    <h1 class="dev-title">WEB DEVELOPMENT</h1>
+                    <h1 class="dev-blurb">In 2023, I continued my KWK journey, learning the fundamentals of frontend development. My team and I worked on a productivity, 'to-do list' based, website called "Chime In"</h1>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+    
+
+</html>
